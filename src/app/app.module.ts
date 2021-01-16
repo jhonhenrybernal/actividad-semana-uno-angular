@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { DestinoViajeComponent } from './destino-viaje/destino-viaje.component';
 import { ListaDestinosComponent } from './lista-destinos/lista-destinos.component';
 import { DestinoDetalleComponent } from './destino-detalle/destino-detalle.component';
-
+import { DestinosApiClient } from './models/destinos-api-client.model';
 
 const routes: Routes = [
 {path:'', redirectTo: 'home', pathMatch:'full'},
@@ -25,7 +25,11 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  
+  providers: [
+    DestinosApiClient
+  ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
