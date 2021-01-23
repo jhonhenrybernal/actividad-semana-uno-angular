@@ -15,7 +15,14 @@
 				</span>
 			</li>
 		</ul>
-		<a	href="#"	class="btn-card" (click)="ir()">ir!</a>
+		<div>
+            <a href="#" (click)="voteUp()"><i class="material-icons md-18">thumb_up</i></a>
+            &nbsp;
+            <a href="#" (click)="voteDown()"><i class="material-icons md-18">thumb_down</i></a>
+            &nbsp;
+            Votos: {{destino.votes}}
+        </div>
+		<a	href="#" class="btn-card" (click)="ir()">ir!</a>
 		<span *ngIf="destino.isSelected()" >
 			<span ngNonBindable> -{{PREFERIDO}}-</span>
 		</span>
